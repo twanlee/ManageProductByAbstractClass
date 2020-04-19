@@ -58,6 +58,6 @@ public abstract class Material {
         id++;
     }
     public String display(){
-        return "Lô hàng: "+ getName() + " có mã id: " + getId();
+        return "Lô hàng: "+ getName() + " có mã id: " + getId() + " có giá: " + getCost() + " số lượng : " + getQuantity();
     }
 }
