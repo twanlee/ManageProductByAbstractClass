@@ -19,6 +19,7 @@ public class CrispyFlour extends Material implements ExpiryDateAndBilling,Discou
         return expirationDate = cal.getTime();
     }
 
+
     @Override
     public int checkBill() {
         return getQuantity()*getCost();
@@ -30,6 +31,6 @@ public class CrispyFlour extends Material implements ExpiryDateAndBilling,Discou
     }
     @Override
     public String display(){
-        return super.display()+". Hạn sử dụng đến: " + expiryDate();
+        return super.display()+".Sản xuất ngày: " + getDateOfManufacture()+" .Hạn sử dụng đến: " + expiryDate();
     }
 }

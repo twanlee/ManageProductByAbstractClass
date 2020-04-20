@@ -26,6 +26,17 @@ public class Meat extends Material implements ExpiryDateAndBilling, Discount{
         return expiryDate = cal.getTime();
     }
 
+
+    public static void main(String[] args) {
+        Date flourDate = new Date(2019, 6, 20);
+
+        Date expiryDate;
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(flourDate);
+        cal.add(Calendar.DATE, 15);
+        System.out.println(cal);
+    }
+
     @Override
     public int checkBill() {
         return getWeight()*getCost()*getQuantity();
@@ -37,6 +48,6 @@ public class Meat extends Material implements ExpiryDateAndBilling, Discount{
     }
     @Override
     public String display(){
-        return super.display()+". Hạn sử dụng đến: " + expiryDate();
+        return super.display()+".Sản xuất ngày: " + getDateOfManufacture()+". Hạn sử dụng đến: " + expiryDate();
     }
 }

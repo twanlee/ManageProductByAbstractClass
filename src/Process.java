@@ -1,9 +1,10 @@
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Process {
     public static void main(String[] args) {
-        Date flourDate = new Date(2019, 6, 20);
-        Date meetDate = new Date(2020, 4, 19);
+        Date flourDate = new Date(2019-1900, 6-1, 20);
+        Date meetDate = new Date(2020-1900, 4-1, 19);
         Material[] listOfMaterial = new Material[10];
         listOfMaterial[0] = new CrispyFlour("Vedan", flourDate, 10, 20000);
         listOfMaterial[1] = new CrispyFlour("Knor", flourDate, 10, 25000);
